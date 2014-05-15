@@ -1,0 +1,360 @@
+%本模板在CTEX2.8版本下编辑，运行两遍PDFLatex编译通过
+%论文封面需要Word单独制作
+\documentclass[oneside,openany,12pt]{cctbook}
+%\documentclass[11pt]{article} 这是一般发表论文的格式
+ \zihao{3}\ziju{0.15}
+\pagestyle{myheadings} \textwidth 16.0cm \textheight 22 truecm
+\special{papersize=21.0cm,29.7cm} \headheight=1.5\ccht
+\headsep=20pt \footskip=12pt \topmargin=0pt \oddsidemargin=0pt
+\setcounter{section}{0}
+\frontmatter
+\def\nn{\nonumber}
+\newcommand{\lbl}[1]{\label{#1}}
+\newcommand{\bib}[1]{\bibitem{#1} \qquad\framebox{\scriptsize #1}}
+%\renewcommand{\baselinestretch}{1.5}
+%\newtheorem{theo}{Theorem}
+%\newtheorem{prop}{Proposition}
+%\newtheorem{lem}{Lemma}
+%\newtheorem{remark}{Remark}
+%\newtheorem{col}{Corollary}
+%\newtheorem{defi}{Definition}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+%\def\c{\theta}
+
+\newcounter{local}
+\newcounter{locallocal}
+\newcommand{\scl}{\stepcounter{local}}
+
+\setcounter{local}{0}
+\renewcommand{\theequation}{\arabic{chapter}.\arabic{section}.\arabic{local}}
+%\renewcommand{\theequation}{\arabic{local}.\arabic{local}}
+\def\s#1{\setcounter{local}{#1}}
+%\usepackage[nooneline,center]{caption2}
+%\usepackage[dvips]{graphics,color}
+\usepackage{Picinpar}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{flafter}
+\usepackage{fancyhdr}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%设置页眉双下划线%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\makeheadrule}{%
+\makebox[0pt][l]{\rule[0.55\baselineskip]{\headwidth}{0.4pt}}%
+\rule[0.7\baselineskip]{\headwidth}{0.4pt}}
+\renewcommand{\headrule}{%
+{\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
+\makeheadrule}}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{\kaishu{\chaptername}~~~#1~}{}}       %设置页眉章节
+\fancyhead[l]{\kaishu{~~~东~南~大~学~本~科~毕~业~论~文}}
+\fancyhead[c]{}
+\fancyhead[r]{\leftmark}
+\fancyfoot[l]{}
+\fancyfoot[c]{\thepage}
+\fancyfoot[r]{}
+
+\begin{document}
+\begin{titlepage}             %从此到 \end{titlepage}的内容第一页不编页号,以后的编页号
+\end{titlepage}
+\frontmatter                %从 \frontmatter 到 \mainmatter 处的内容可在目录中出现但不编章号
+                            %从 \backmatter 以后的内容也在目录中出现但不编章号
+
+\begin{center}{\kaishu \zihao{2}{中文标题}}\end{center}
+\vskip 0.5cm
+\begin{center}{\kaishu\zihao{4}  摘\ \ \ \ 要}
+ \end{center}　
+\addcontentsline{toc}{chapter}{摘\ \ \ \ 要}
+{\kaishu{\quad 某某理论（\emph{Extreme Value Theory}）主要研究。。。
+
+
+。。。。。。。。。
+
+本文。。。。。。}}
+
+\vskip 1cm \noindent{\kaishu 关键词: \ \ 关键词1,\ 关键词2,\ 关键词3,\ 关键词4}
+
+\newpage
+\thispagestyle{plain}
+\begin{center}{\heiti \large  English Title}\end{center}
+\vskip 0.5cm
+\begin{center}{\rm\zihao{4}  Abstract}
+\end{center}
+\addcontentsline{toc}{chapter}{Abstract}
+\par
+xx theory is .................
+
+.................
+
+
+\vskip 0.8cm \noindent{\rm Key Words:\ XXX,\ XXX,\ XXX,\ XXX}
+\tableofcontents
+
+%\mainmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\mainmatter
+
+%\markboth{\protect
+%\scriptsize{\underline{\underline{\hspace{1cm}{\bf
+%东~南~大~学~毕~业~设~计~报~告}\hspace{0.5cm}{\bf 第一章 \qquad  引言}
+% \hspace{1cm}}}}}
+% {\protect \scriptsize{
+% \underline{\underline{\hspace{1cm}{\bf 东~南~大~学~毕~业~设~计~报~告}\hspace{7cm}{\songti
+% 第一章 \qquad 引言  }\hspace{1.5cm}}}}}
+
+\chapter{引言  }
+\s0 \vskip 3mm
+
+。。。。。。。。。。见文献\cite{Korobeinikov2007}.
+.....................
+
+本论文结构如下：
+
+第二章主要讨论。。。。。。。。。。。
+
+第三章。。。。。
+
+第四章。。。。。。。。。。
+
+第五章给出文章中主要的\textrm{MATLAB}程序.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+%\markboth{\protect
+%\scriptsize{\underline{\underline{\hspace{0.5cm}{\bf
+%东~南~大~学~毕~业~设~计~报~告}\hspace{0.5cm}{\bf 第二章 \qquad 阈值$u$确定方法的讨论}\hspace{2.5cm}}}}}{\protect \scriptsize{
+% \underline{\underline{\hspace{0.5cm}{\bf 东~南~大~学~毕~业~设~计~报~告}\hspace{4cm}{\songti
+%第二章 \qquad 阈值$u$确定方法的讨论 }\hspace{2cm}}}}}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{第2章标题 }
+\s0
+本章主要讨论。。。。。
+
+\section{xxx}
+\s0
+\par
+
+
+xxxxx
+\section{xxxxx}
+\s0
+\par
+
+表格实例
+\begin{table}[h]
+\caption{表格标题}\centering
+\vskip0.1in
+\tabcolsep0.15in
+\begin{tabular}{*{9}{c}}
+\hline
+Year&Day&Amount&Year&Dear&Amount&Year&Day&Amount\\\hline
+1948&24&1.0&1965&15&0.8&1977&7&0.3\\
+1948&31&2.5&1965&16&3.7&1977&24&1.8\\
+1954&11&1.2&1965&17&1.3&1979&31&0.4\\
+1954&22&1.2&1965&30&3.8&1980&30&1.0\\
+1954&23&4.1&1965&31&0.1&1980&30&2.6\\
+1955&19&9.0&1966&16&0.1&1980&31&1.2\\
+1955&23&3.0&1966&22&0.2&1982&13&1.0\\
+1955&24&1.0&1966&25&2.0&1982&14&5.0\\
+1955&27&1.4&1966&26&7.6&1985&20&1.7\\
+1956&23&2.0&1966&27&0.1&1985&28&2.4\\
+1958&7&3.0&1966&29&1.8&1987&25&0.1\\
+1959&8&1.7&1966&30&0.5&1987&26&0.5\\
+1959&16&1.2&1967&19&0.5&1988&7&7.1\\
+1961&21&1.2&1968&10&0.5&1988&7&7.1\\
+1961&26&1.1&1968&11&1.1&1995&23&0.7\\
+1962&1&1.5&1968&25&1.4&1995&30&0.1\\
+1962&10&5.0&1970&12&1.0&1996&6&2.7\\
+1962&19&1.6&1970&23&1.0&1996&7&2.9\\
+1962&28&2.0&1973&7&0.7&1997&11&0.4\\
+1963&26&0.1&1973&8&5.7&1998&19&2.0\\
+1964&13&0.4&1976&17&0.4\\\hline
+\end{tabular}
+\end{table}
+
+.............................
+
+\textbf{例2.1}。。。。。。。。。。。。。。。。。。。。。。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+%\markboth{\protect
+%\scriptsize{\underline{\underline{\hspace{0.5cm}{\bf
+%东~南~大~学~毕~业~设~计~报~告}\hspace{1cm}{\bf 第三章 \qquad 参数估计}\hspace{4cm}}}}}{\protect \scriptsize{
+% \underline{\underline{\hspace{1cm}{\bf 东~南~大~学~毕~业~设~计~报~告}\hspace{6cm}{\songti
+%第三章 \qquad 参数估计 }\hspace{1.5cm}}}}}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{xxx}
+\s0
+本章主要讨论。。。。。。。。。。。。。。。。。。。。。。。
+
+\section{xxxx}
+\s0
+\par
+
+
+。。。。。。。。。。。。。。。。。。。。。。。
+
+\section{xxxx}
+\s0
+\par
+
+。。。。。。。。。。。
+
+\subsection{xxx}
+
+。。。。。。。。。。。。。。。。。。。。
+
+\subsection{xxxxx}
+
+。。。。。。。。。。
+
+以上过程可以\textrm{Matlab}实现.
+
+\subsection{xxxx}
+
+
+
+xxxxxx
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+%\markboth{\protect
+%\scriptsize{\underline{\underline{\hspace{0.5cm}{\bf
+%东~南~大~学~毕~业~设~计~报~告}\hspace{1cm}{\bf 第四章 \qquad 实证分析}\hspace{4cm}}}}}{\protect \scriptsize{
+%\underline{\underline{\hspace{1cm}{\bf 东~南~大~学~毕~业~设~计~报~告}\hspace{6cm}{\songti
+%第四章 \qquad 实证分析 }\hspace{1.5cm}}}}}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{xxxx}
+\s0
+xxxx
+
+\section{xxx}
+\s0
+\par
+。。。。。。。。。。。。。。
+\subsection{xxx}
+
+。。。。。。。。。。。。。。。。。。。
+\subsection{xxx}
+
+xxxx 具体数据为
+\begin{verbatim}
+ 460 457 452 459 462 459 463 479 493 490 492 498 499 497 496 490 489 478
+ 487 491 487 482 479 478 479 477 479 475 479 476 476 478 479 477 476 475
+ 475 473 474 474 474 465 466 467 471 471 467 473 481 488 490 489 489 485
+ 491 492 494 499 498 500 497 494 495 500 504 513 511 514 510 509 515 519
+\end{verbatim}
+
+xxxx 参数估计及VaR的计算均由\textrm{Matlab}语言实现.
+
+插图例子
+\begin{figure}[htbp]
+\begin{center}
+\resizebox{!}{10cm}{\includegraphics{1.jpg}}
+\caption{图片标题}
+\end{center}
+\end{figure}
+
+表格例子
+\begin{table}[h]
+\caption{表格标题}\centering
+\vskip0.1in
+\tabcolsep0.15in\begin{tabular}{*{5}{c}}
+\hline
+&$\hat{\xi}$&$\hat{\sigma}$&var($\hat{\xi}$)&var($\hat{\sigma}$)\\\hline
+ML&0.2470&0.8827&0.2776&0.7449\\
+MM&0.1928&0.9369&0.1015&0.1930\\
+PWM&0.2713&0.8459&0.1363&0.1970\\
+GPWM&0.1038&0.9279&0.7422&0.3297\\\hline
+\end{tabular}
+\end{table}
+
+
+
+\section{xxxxx}
+\s0
+\par
+。。。。。。。。。。。。。。。.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+%\markboth{\protect
+%\scriptsize{\underline{\underline{\hspace{0.5cm}{\bf
+%东~南~大~学~毕~业~设~计~报~告}\hspace{1cm}{\bf 第五章 \qquad 附录:主要\textrm{Matlab}程序}\hspace{3cm}}}}}{\protect \scriptsize{
+% \underline{\underline{\hspace{1cm}{\bf 东~南~大~学~毕~业~设~计~报~告}\hspace{4cm}{\songti
+%第五章 \qquad 附录:主要\textrm{Matlab}程序}\hspace{1.5cm}}}}}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{附录:}
+\s0
+xxxxxxxxxxxx
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\backmatter
+\newpage
+\chapter{致\quad\quad 谢}
+\vspace{0.3cm}
+
+{%\zihao{5}
+ \ziju{0.1}
+ \renewcommand{\baselinestretch}{1.5}
+ 。。。。。。。。。。。。。。。。。。。。。。。。。。。。。
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thebibliography}{}
+\bibliographystyle{siam}
+\setlength{\baselineskip}{8pt}
+\small{
+\bibitem{Korobeinikov2007}
+A.Korobeinikov,\newblock{\em Global Properties of Infectious Disease Models with Nonlinear Incide-
+nce} [J],Bull.Math.Biol.,2007,69:1871-1886.
+
+\bibitem{guqingm}
+苟清明,王稳地,
+\newblock{\em 一类具有饱和发生率的SEIS模型的全局稳定性}
+[J], {生物数学学报}, 2008, 23(2):265-272.
+
+\bibitem{Thieme}
+H.R.Thieme,\newblock{\em Global asymptotic stablility in epidemic models}[J],in Equadiff 82,Proc.int.Conf.,W\"{u}rzburg 1982,no. 1017 in Lectures Notes in Biomath.,Spinger-Verlag,pp:608-615,1983.
+
+\bibitem{mazhien}
+马知恩等,
+\newblock{\em 传染病动力学的数学建模与研究} [M],
+北京:科学出版社, 2004
+
+\bibitem{Liukunlun} 刘昆仑.
+\newblock{基于VaR模型的金融市场风险计量研究:}
+{[硕士学位论文]}\ 武汉: 华中科技大学\ 2006.10
+}
+\end {thebibliography}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\end{document}

@@ -1,0 +1,23 @@
+\BOOKMARK [0][-]{section*.1}{摘要}{}% 1
+\BOOKMARK [0][-]{section*.3}{Abstract}{}% 2
+\BOOKMARK [0][-]{section*.5}{目录}{}% 3
+\BOOKMARK [0][-]{chapter.1}{1\040AAA}{}% 4
+\BOOKMARK [1][-]{section.1.1}{1.1\040aaa}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.2}{1.2\040bbb}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.3}{1.3\040ccc}{chapter.1}% 7
+\BOOKMARK [2][-]{subsection.1.3.1}{1.3.1\040c1}{section.1.3}% 8
+\BOOKMARK [2][-]{subsection.1.3.2}{1.3.2\040c2}{section.1.3}% 9
+\BOOKMARK [0][-]{chapter.2}{2\040BBBB}{}% 10
+\BOOKMARK [1][-]{section.2.1}{2.1\040aaa}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.2}{2.2\040bbb}{chapter.2}% 12
+\BOOKMARK [0][-]{chapter.3}{3\040CCCCC}{}% 13
+\BOOKMARK [1][-]{section.3.1}{3.1\040aaa}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.2}{3.2\040bbb}{chapter.3}% 15
+\BOOKMARK [0][-]{chapter.4}{4\040DDDD}{}% 16
+\BOOKMARK [1][-]{section.4.1}{4.1\040aaa}{chapter.4}% 17
+\BOOKMARK [1][-]{section.4.2}{4.2\040bbb}{chapter.4}% 18
+\BOOKMARK [2][-]{subsection.4.2.1}{4.2.1\040b1}{section.4.2}% 19
+\BOOKMARK [1][-]{section.4.3}{4.3\040ccc}{chapter.4}% 20
+\BOOKMARK [0][-]{section*.9}{致谢}{}% 21
+\BOOKMARK [0][-]{chapter*.11}{参考文献}{}% 22
+\BOOKMARK [0][-]{appendix.A}{A Matlab程序}{}% 23
