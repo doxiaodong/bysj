@@ -183,6 +183,13 @@ a:focus {
 
     They cover everything what you see on first three steps of the demo.
 */
+#zhuping img{
+    -webkit-transform: translateX(249px);
+    -moz-transform:    translateX(249px);
+    -ms-transform:     translateX(249px);
+    -o-transform:      translateX(249px);
+    transform:         translateX(249px);
+}
 .slide {
     display: block;
 
@@ -265,11 +272,11 @@ a:focus {
 }
 
 #bspline img{
-    -webkit-transform: translateX(-120px);
-    -moz-transform:    translateX(-120px);
-    -ms-transform:     translateX(-120px);
-    -o-transform:      translateX(-120px);
-    transform:         translateX(-120px);
+    -webkit-transform: translateX(-160px);
+    -moz-transform:    translateX(-160px);
+    -ms-transform:     translateX(-160px);
+    -o-transform:      translateX(-160px);
+    transform:         translateX(-160px);
 }
 .step p{
     font-size: 70px;
@@ -507,11 +514,11 @@ a:focus {
 
 #hebing img{
     float: left;
-    -webkit-transform: translateX(183px);
-    -moz-transform:    translateX(183px);
-    -ms-transform:     translateX(183px);
-    -o-transform:      translateX(183px);
-    transform:         translateX(183px);
+    -webkit-transform: translateX(143px);
+    -moz-transform:    translateX(143px);
+    -ms-transform:     translateX(143px);
+    -o-transform:      translateX(143px);
+    transform:         translateX(143px);
 }
 
 /*
