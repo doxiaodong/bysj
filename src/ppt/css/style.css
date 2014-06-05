@@ -17,11 +17,11 @@ time, mark, audio, video {
     border: 0;
     font-size: 100%;
     font: inherit;
-    vertical-align: baseline;
+    /*vertical-align: baseline;*/
 }
-/*sub, sup{
+sub, sup{
     font-size: 0.5em;
-}*/
+}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -153,6 +153,13 @@ a:focus {
     line-height: 1.5;
 }
 
+.step img{
+	-webkit-transform: translateX(-40px);
+    -moz-transform:    translateX(-40px);
+    -ms-transform:     translateX(-40px);
+    -o-transform:      translateX(-40px);
+    transform:         translateX(-40px);
+}
 /*
     ... and we enhance the styles for impress.js.
 
